@@ -1,27 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.navlink{
+  cursor: pointer;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.navlink::before{
+  content: "";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:3px;
+  z-index: -1;
+  background-color: red;
+  opacity: 0.5;
+  z-index: -1;
+  transition: 0.5s;
+}
+.navlink:hover::before{
+  width:100%
+}
+.nav{
+  z-index: 999;
+  background-color: rgb(90, 54, 54);
+  
+  animation: 0.6s ease-out normal fixedAnim;
+ position: fixed;
+ left :0;
+ right:0;
+ top:0;
+}
+@keyframes fixedAnim{
+  0%{
+    top:-100%;
+  }
+  100%{
+    top:0;
   }
 }
+.education::before{
+content: "";
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:100%;
+background:red;
+opacity: 0.5;
+z-index:-1;
+transition: 0.5s;
+}
+.education:hover::before{
+  width:100%;
+}
+.whatsapp_float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+@media screen and (max-width: 767px) {
+  /* .whatsapp-icon {
+    margin-top: 10px;
+  } */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .whatsapp_float {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 10px;
+    font-size: 22px;
+  }
+}
+.ant-modal-footer{
+display: none;
+}
+.ant-modal-close {
+  top:1px !important;
+  right:5px !important;
+}
+.ant-drawer-content{
+  width: 73% !important;
+  height:97% !important;
 }
