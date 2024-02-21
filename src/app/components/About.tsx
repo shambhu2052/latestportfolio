@@ -20,10 +20,7 @@ const About: React.FC<sectionid> = ({ id }) => {
     >
       <h2 className="text-[24px] font-medium  text-center">
         About <span className="text-[#ff004f]">Me</span>
-        <div
-          className="flex flex-wrap gap-4 md:justify-between my-3"
-          data-aos="fade-right"
-        >
+        <div className="flex flex-wrap gap-4 md:justify-between my-3">
           <div className="w-full md:basis-[45%] ">
             <h4 className="text-left md:text-center  font-normal text-base py-2">
               Education

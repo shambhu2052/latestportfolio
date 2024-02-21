@@ -16,7 +16,6 @@ const Myskill: React.FC<sectionid> = ({ id }) => {
     <div
       className="container mx-auto my-5 px-3 md:px-0 pt-[52px] md:pt-[74px]"
       id={id}
-      data-aos="fade-up-right"
     >
       <h2 className="text-[24px] font-medium  text-center">
         My<span className="text-[#ff004f]">Skill</span>

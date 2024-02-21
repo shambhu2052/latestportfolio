@@ -16,7 +16,7 @@ const Contactme: React.FC<sectionid> = ({ id }) => {
     });
   });
   return (
-    <div id={id} className="container mx-auto mt-[20px] " data-aos="fade-up">
+    <div id={id} className="container mx-auto mt-[20px] ">
       <h2 className="text-[24px] font-medium  text-center">
         Contact<span className="text-[#ff004f]">Me</span>
       </h2>
