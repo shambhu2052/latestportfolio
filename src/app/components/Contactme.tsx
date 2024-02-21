@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdLocationPin } from "react-icons/md";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import AOS, { init } from "aos";
+import "aos/dist/aos.css";
 import Email from "./Email";
 interface sectionid {
   id: string;
 }
 const Contactme: React.FC<sectionid> = ({ id }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 650,
+      once: false,
+    });
+  });
   return (
-    <div id={id} className="container mx-auto mt-[20px] ">
+    <div id={id} className="container mx-auto mt-[20px] " data-aos="fade-up">
       <h2 className="text-[24px] font-medium  text-center">
         Contact<span className="text-[#ff004f]">Me</span>
       </h2>

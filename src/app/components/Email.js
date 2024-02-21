@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import React from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 const Email = () => {
   const {
     register,
@@ -86,13 +87,18 @@ const Email = () => {
           </p>
         )}
         <br />
-        <button
+        <motion.button
+          whileHover={{
+            scale: 1,
+            transition: { duration: 0 },
+            rotate: 1,
+          }}
           type="submit"
           value="Send"
           className="w-[200px] bg-[#ff004f] hover:text-white text-base font-normal rounded-md border-2 border-solid px-4 py-2"
         >
           Send
-        </button>
+        </motion.button>
         <br />
       </form>
     </div>

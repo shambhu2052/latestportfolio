@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { MdDateRange } from "react-icons/md";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { easeIn } from "framer-motion";
 interface sectionid {
   id: string;
 }
@@ -9,6 +10,7 @@ const About: React.FC<sectionid> = ({ id }) => {
   useEffect(() => {
     AOS.init({
       duration: 650,
+      once: false,
     });
   });
   return (
@@ -18,7 +20,10 @@ const About: React.FC<sectionid> = ({ id }) => {
     >
       <h2 className="text-[24px] font-medium  text-center">
         About <span className="text-[#ff004f]">Me</span>
-        <div className="flex flex-wrap gap-4 md:justify-between my-3">
+        <div
+          className="flex flex-wrap gap-4 md:justify-between my-3"
+          data-aos="fade-right"
+        >
           <div className="w-full md:basis-[45%] ">
             <h4 className="text-left md:text-center  font-normal text-base py-2">
               Education

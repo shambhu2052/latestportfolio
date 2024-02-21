@@ -9,13 +9,14 @@ import Myproject from "./components/Myproject";
 import Contactme from "./components/Contactme";
 import Footer from "./components/Footer";
 import Simplemodal from "./components/Simplemodal";
+import Myparticlas from "./components/Myparticlas";
 interface sectionid {
   id: string;
 }
 const Home: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   useEffect(() => {
-    setIsModalOpen(true);
+    // setIsModalOpen(true);
   }, []);
   return (
     <div>
@@ -29,6 +30,7 @@ const Home: React.FC = () => {
           <i className="fa fa-whatsapp whatsapp-icon"></i>
         </a>
       </>
+      <Myparticlas />
       <Navbar />
       <Mainsection id="section1" />
       <About id="section2" />
